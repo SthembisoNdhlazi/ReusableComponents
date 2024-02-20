@@ -10,17 +10,17 @@ import Foundation
 public struct Item: ItemViewable, Identifiable {
     public var id: String
     
-    var drinkName: String
+    public var drinkName: String
     
-    var glass: String?
+    public var glass: String?
     
-    var instructions: String?
+    public var instructions: String?
     
-    var image: String
+    public var image: String
     
-    var category: String?
+    public var category: String?
     
-    var isFavorite: Bool?
+    public var isFavorite: Bool?
     
     public init(id: String, drinkName: String, glass: String? = nil, instructions: String? = nil, image: String, category: String? = nil, isFavorite: Bool? = nil) {
         self.id = id
