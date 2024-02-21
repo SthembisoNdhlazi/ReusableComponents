@@ -7,3 +7,6 @@ So far, this repo has the following components:
 - More coming soon...
 
 
+Here's an example of the Side bar component and the itemListView
+
+![Simulator Screenshot - iPhone 15 - 2024-02-21 at 06 37 21](https://github.com/SthembisoNdhlazi/ReusableComponents/assets/101163890/b3288862-f7a5-4db2-8447-321eca973882)
