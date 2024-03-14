@@ -1,7 +1,7 @@
 import SwiftUI
 
 @available(iOS 15.0, *)
-struct TabBarComponent<Provider: TabBarProvider>: View {
+public struct TabBarComponent<Provider: TabBarProvider>: View {
     
     @State var selectedTab: Int = 0
     @StateObject var dataProvider: Provider
@@ -10,7 +10,7 @@ struct TabBarComponent<Provider: TabBarProvider>: View {
         self._dataProvider = StateObject(wrappedValue: dataProvider)
     }
     
-    var body: some View {
+    public var body: some View {
         
         ZStack(alignment: .bottom) {
             TabView(selection: $selectedTab) {
@@ -34,7 +34,7 @@ struct TabBarComponent<Provider: TabBarProvider>: View {
         }
     }
     
-    func CustomTabItem(image: Image, title: String, isActive: Bool) -> some View {
+    private func CustomTabItem(image: Image, title: String, isActive: Bool) -> some View {
         HStack(spacing: 10) {
             Spacer()
             image
