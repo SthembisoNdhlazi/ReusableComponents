@@ -18,10 +18,10 @@ public protocol TabBarProvider: ObservableObject {
 public struct TabBarCategory {
     var id: Int
     var title: String
-    var icon: Image
+    var icon: Image?
     var categoryView: AnyView
     
-    public init(id: Int, title: String, icon: Image, categoryView: AnyView) {
+    public init(id: Int, title: String, icon: Image? = nil, categoryView: AnyView) {
         self.id = id
         self.title = title
         self.icon = icon

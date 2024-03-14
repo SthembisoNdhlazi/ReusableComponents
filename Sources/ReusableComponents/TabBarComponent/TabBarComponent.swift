@@ -6,7 +6,7 @@ public struct TabBarComponent<Provider: TabBarProvider>: View {
     @State var selectedTab: Int = 0
     @StateObject var dataProvider: Provider
     
-    init(dataProvider: Provider) {
+    public init(dataProvider: Provider) {
         self._dataProvider = StateObject(wrappedValue: dataProvider)
     }
     
@@ -34,14 +34,17 @@ public struct TabBarComponent<Provider: TabBarProvider>: View {
         }
     }
     
-    private func CustomTabItem(image: Image, title: String, isActive: Bool) -> some View {
+    private func CustomTabItem(image: Image?, title: String, isActive: Bool) -> some View {
         HStack(spacing: 10) {
             Spacer()
-            image
-                .resizable()
-                .renderingMode(.template)
-                .foregroundColor(isActive ? .black : .gray)
-                .frame(width: 20, height: 20)
+            if let image {
+                image
+                    .resizable()
+                    .renderingMode(.template)
+                    .foregroundColor(isActive ? .black : .gray)
+                    .frame(width: 20, height: 20)
+            }
+            
             if isActive{
                 Text(title)
                     .font(.system(size: 14))
