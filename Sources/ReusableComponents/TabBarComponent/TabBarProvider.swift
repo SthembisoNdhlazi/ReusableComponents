@@ -11,6 +11,7 @@ import SwiftUI
 @available(iOS 13.0, *)
 public protocol TabBarProvider: ObservableObject {
     var categories: [TabBarCategory] {get set}
+    var foregroundColor: Color { get set }
 }
 
 @available(iOS 13.0, *)

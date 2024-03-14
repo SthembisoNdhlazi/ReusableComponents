@@ -50,7 +50,7 @@ struct TabBarComponent<Provider: TabBarProvider>: View {
             Spacer()
         }
         .frame(width: isActive ? .infinity : 60, height: 60)
-        .background(isActive ? .gray.opacity(0.4) : .clear)
+        .background(isActive ? dataProvider.foregroundColor.opacity(0.4) : .clear)
         .cornerRadius(30)
         .padding(.horizontal)
     }
