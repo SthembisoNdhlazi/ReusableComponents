@@ -8,7 +8,7 @@ public enum NetworkError: Error {
 }
 
 public class NetworkManager {
-    static let shared = NetworkManager()
+    public static let shared = NetworkManager()
     
     private init() {}
     
