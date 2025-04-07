@@ -8,6 +8,10 @@ public enum NetworkError: Error {
 }
 
 public class NetworkManager {
+    static let shared = NetworkManager()
+    
+    private init() {}
+    
     public func fetchJSON<T: Decodable>(from url: URL, completion: @escaping (Result<T, NetworkError>) -> Void) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
